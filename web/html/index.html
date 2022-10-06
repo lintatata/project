@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历生成</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+    integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="left-box">
+        <div class="left-inbox">
+            <ul>
+                
+                <li class="geren">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 23C26.7614 23 29 20.7614 29 18C29 15.2386 26.7614 13 24 13C21.2386 13 19 15.2386 19 18C19 20.7614 21.2386 23 24 23Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M10.022 38.332C10.3657 33.1206 14.7016 29 20 29H28C33.2914 29 37.6229 33.1097 37.9767 38.3113" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>个人信息</span>
+                    <span1 class="geren-j"><</span1>
+                </li>
+                <div class="geren-box">
+                    <p>姓名</p>
+                    <input class="inp-name" type="text" placeholder="例：张三" value="">
+                    <p>职位</p>
+                    <input class="inp-zh" type="text" placeholder="例：Java开发">
+                    <p>地址</p>
+                    <input class="inp-area" type="text" placeholder="例：xx市xx区">
+                    <p>电话号码</p>
+                    <input class="inp-phone" type="text" placeholder="例：13000000000">
+                    <p>学校</p>
+                    <input class="inp-school" type="text" placeholder="例：浙江工业大学">
+                    <p>邮箱地址</p>
+                    <input class="inp-email" type="text" placeholder="例：xxx@qq.com">
+                </div>
+
+
+
+                <li class="ziwo">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 33V42C40 43.1046 39.1046 44 38 44H31.5" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 16V6C40 4.89543 39.1046 4 38 4H10C8.89543 4 8 4.89543 8 6V42C8 43.1046 8.89543 44 10 44H16" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 16H30" stroke="#333" stroke-width="4" stroke-linecap="round"/><path d="M23 44L40 23" stroke="#333" stroke-width="4" stroke-linecap="round"/><path d="M16 24H24" stroke="#333" stroke-width="4" stroke-linecap="round"/></svg>
+                    <span>自我评价</span>
+                    <span1 class="ziwo-j"><</span1> 
+                </li>
+                <div class="ziwo-box">
+                    <input type="checkbox" class="ziwo-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="ziwo-t" placeholder="例：对待工作认真负责......"></textarea>
+                </div>
+
+                
+
+                <li class="work">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 14C14 10.6863 16.6863 8 20 8H29C32.3137 8 35 10.6863 35 14V16H14V14Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 25L23.5149 29.8787C23.8334 29.9584 24.1666 29.9584 24.4851 29.8787L44 25V38C44 39.1046 43.1046 40 42 40H6C4.89543 40 4 39.1046 4 38V25Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 27V18C44 16.8954 43.1046 16 42 16H6C4.89543 16 4 16.8954 4 18V27" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.5 23C26.5 24.3807 25.3807 25.5 24 25.5C22.6193 25.5 21.5 24.3807 21.5 23C21.5 21.6193 22.6193 20.5 24 20.5C25.3807 20.5 26.5 21.6193 26.5 23Z" fill="#333"/></svg>
+                    <span>工作经历</span>
+                    <span1 class="work-j"><</span1> 
+                </li>
+                <div class="work-box">
+                    <input type="checkbox" class="work-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="work-t" placeholder="例：工作单位、工作职位、工作时间等"></textarea>
+                </div>
+
+
+
+                <li class="edu">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 17.4L23.0222 9L44.0444 17.4L23.0222 25.8L2 17.4Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M44.0444 17.51V26.7332" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5557 21.8252V34.2666C11.5557 34.2666 16.3658 38.9999 23.0224 38.9999C29.679 38.9999 34.4891 34.2666 34.4891 34.2666V21.8252" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>教育经历</span>
+                    <span1 class="edu-j"><</span1> 
+                </li>
+                <div class="edu-box">
+                    <input type="checkbox" class="edu-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="edu-t" placeholder="例：学校、专业、绩点等"></textarea>
+                </div>
+
+
+
+                <li class="prize">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 30C30.6274 30 36 24.4694 36 17.6471V4H12V17.6471C12 24.4694 17.3726 30 24 30Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 21V11H4C4 17.6667 8 21 12 21Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M36 21V11H44C44 17.6667 40 21 36 21Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 32V36" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 42L18.69 36H29.0425L33 42H15Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/></svg>
+                    <span>荣誉奖项</span>
+                    <span1 class="prize-j"><</span1> 
+                </li>
+                <div class="prize-box">
+                    <input type="checkbox" class="prize-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="prize-t" placeholder="例：名称、奖项、说明等"></textarea>
+                </div>
+
+
+
+                <li class="book">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 36H6C4.89543 36 4 35.1046 4 34V8C4 6.89543 4.89543 6 6 6H42C43.1046 6 44 6.89543 44 8V34C44 35.1046 43.1046 36 42 36H34" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14H36" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 21H18" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 28H16" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 33C33.3137 33 36 30.3137 36 27C36 23.6863 33.3137 21 30 21C26.6863 21 24 23.6863 24 27C24 30.3137 26.6863 33 30 33Z" fill="none" stroke="#333" stroke-width="4"/><path d="M30 40L34 42V31.4722C34 31.4722 32.8594 33 30 33C27.1406 33 26 31.5 26 31.5V42L30 40Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>证书</span>
+                    <span1 class="book-j"><</span1> 
+                </li>
+                <div class="book-box">
+                    <input type="checkbox" class="book-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="book-t" placeholder="例：名称、颁发机构等"></textarea>
+                </div>
+
+
+
+                <li class="skills">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 37C5 35.8954 5.89543 35 7 35H41C42.1046 35 43 35.8954 43 37V42C43 43.1046 42.1046 44 41 44H7C5.89543 44 5 43.1046 5 42V37Z" fill="none" stroke="#333" stroke-width="4"/><path d="M5 31C5 29.8954 5.89543 29 7 29H41C42.1046 29 43 29.8954 43 31V42C43 43.1046 42.1046 44 41 44H7C5.89543 44 5 43.1046 5 42V31Z" stroke="#333" stroke-width="4"/><path d="M18.763 15.6637C18.9051 15.2657 19.2821 15 19.7047 15H28.2953C28.7179 15 29.0949 15.2657 29.237 15.6637L34 29H14L18.763 15.6637Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="15" y="4" width="18" height="10.8" rx="5.4" fill="none" stroke="#333" stroke-width="4"/></svg>
+                    <span>专业技能</span>
+                    <span1 class="skills-j"><</span1> 
+                </li>
+                <div class="skills-box">
+                    <input type="checkbox" class="skills-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="skills-t" placeholder="例：前端开发"></textarea>
+                </div>
+
+
+
+                <li class="hobby">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 8C8.92487 8 4 12.9249 4 19C4 30 17 40 24 42.3262C31 40 44 30 44 19C44 12.9249 39.0751 8 33 8C29.2797 8 25.9907 9.8469 24 12.6738C22.0093 9.8469 18.7203 8 15 8Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>兴趣爱好</span>
+                    <span1 class="hobby-j"><</span1> 
+                </li>
+                <div class="hobby-box">
+                    <input type="checkbox" class="hobby-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="hobby-t" placeholder="例：运动"></textarea>
+                </div>
+
+
+
+                <li class="langue">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 24C4 24 10 15 14 15C18 15 22 17 24 17C26 17 30 15 34 15C38 15 44 24 44 24C44 24 34 34 24 34C14 34 4 24 4 24Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>语言能力</span>
+                    <span1 class="langue-j"><</span1>
+                </li>
+                <div class="langue-box">
+                    <input type="checkbox" class="langue-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="langue-t" placeholder="例：英语"></textarea>
+                </div>
+
+
+
+                <li class="experience">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="13" y="10" width="28" height="34" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M35 10V4H8C7.44772 4 7 4.44772 7 5V38H13" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 22H33" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 30H33" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>项目经验</span>
+                    <span1 class="experience-j"><</span1>
+                </li>
+                <div class="experience-box">
+                    <input type="checkbox" class="experience-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="experience-t" placeholder="例：开发xx小程序"></textarea>
+                </div>
+
+
+
+                <li class="others">
+                    <?xml version="1.0" encoding="UTF-8"?><svg class="pic" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="24" r="3" fill="#333"/><circle cx="24" cy="24" r="3" fill="#333"/><circle cx="36" cy="24" r="3" fill="#333"/></svg>
+                    <span>其他信息</span>
+                    <span1 class="others-j"><</span1>
+                </li>
+                <div class="others-box">
+                    <input type="checkbox" class="others-gou" value="yes" checked="checked">
+                    <label for="yes">是否需要此模块</label>
+                    <p>内容</p>
+                    <textarea class="others-t" placeholder=""></textarea>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mid-box">
+        <div class="box-g">
+            <div class="box-g-1">
+                <span class="p-name"></span>
+                <p class="p-zhiwei"></p>
+            </div>
+            <div class="box-g-2">
+                <div class="box-g-2-1">
+                    <?xml class="pict" version="1.0" encoding="UTF-8"?><svg width="12" height="12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.85786 32.7574C6.23858 33.8432 4 35.3432 4 37C4 40.3137 12.9543 43 24 43C35.0457 43 44 40.3137 44 37C44 35.3432 41.7614 33.8432 38.1421 32.7574" stroke="#1e8443" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 35C24 35 37 26.504 37 16.6818C37 9.67784 31.1797 4 24 4C16.8203 4 11 9.67784 11 16.6818C11 26.504 24 35 24 35Z" fill="none" stroke="#1e8443" stroke-width="4" stroke-linejoin="round"/><path d="M24 22C26.7614 22 29 19.7614 29 17C29 14.2386 26.7614 12 24 12C21.2386 12 19 14.2386 19 17C19 19.7614 21.2386 22 24 22Z" fill="none" stroke="#1e8443" stroke-width="4" stroke-linejoin="round"/></svg>
+                    <p class="p-area"></p> 
+                </div>
+                <div class="box-g-2-2">
+                    <?xml class="pict" version="1.0" encoding="UTF-8"?><svg width="12" height="12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.9961 7.68583C17.7227 7.68583 18.3921 8.07985 18.7448 8.71509L21.1912 13.1219C21.5115 13.6989 21.5266 14.3968 21.2314 14.9871L18.8746 19.7008C18.8746 19.7008 19.5576 23.2122 22.416 26.0706C25.2744 28.929 28.7741 29.6002 28.7741 29.6002L33.487 27.2438C34.0777 26.9484 34.7761 26.9637 35.3533 27.2846L39.7726 29.7416C40.4072 30.0945 40.8008 30.7635 40.8008 31.4896L40.8008 36.5631C40.8008 39.1468 38.4009 41.0129 35.9528 40.1868C30.9249 38.4903 23.1202 35.2601 18.1734 30.3132C13.2265 25.3664 9.99631 17.5617 8.29977 12.5338C7.47375 10.0857 9.33984 7.68583 11.9235 7.68583L16.9961 7.68583Z" fill="none" stroke="#1e8443" stroke-width="4" stroke-linejoin="round"/></svg>
+                    <p class="p-phone"></p>
+                </div>
+                <div class="box-g-2-3">
+                    <?xml class="pict" version="1.0" encoding="UTF-8"?><svg width="12" height="12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 33C4 31.8954 4.89543 31 6 31H12V24L24 16L36 24V31H42C43.1046 31 44 31.8954 44 33V42C44 43.1046 43.1046 44 42 44H4V33Z" fill="none" stroke="#1e8443" stroke-width="4" stroke-linejoin="round"/><path d="M24 6V16" stroke="#1e8443" stroke-width="4" stroke-linecap="round"/><path d="M36 11.9998V5.99984C36 5.99984 34.5 8.99984 30 5.99984C25.5 2.99984 24 5.99984 24 5.99984V11.9998C24 11.9998 25.5 8.99984 30 11.9998C34.5 14.9998 36 11.9998 36 11.9998Z" stroke="#1e8443" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 44V31H20L20 44" stroke="#1e8443" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 44L30 44" stroke="#1e8443" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <p class="p-school"></p>
+                </div>
+                <div class="box-g-2-4">
+                    <?xml class="pict" version="1.0" encoding="UTF-8"?><svg width="12" height="12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 39H44V24V9H24H4V24V39Z" fill="none" stroke="#1e8443" stroke-width="4" stroke-linejoin="round"/><path d="M4 9L24 24L44 9" stroke="#1e8443" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 9H4V24" stroke="#1e8443" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 24V9H24" stroke="#1e8443" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <p class="p-e-mail"></p>
+                </div>
+            </div> 
+        </div>
+        <div class="line"></div>
+        <div class="box-z">
+            <span class="p-1">自我评价</span>
+            <p class="p-z"></p>
+        </div>
+        <div class="box-go">
+            <p class="p-1">工作经历</p>
+            <p class="p-go"></p>
+        </div>
+        <div class="box-edu">
+            <p class="p-1">教育经历</p>
+            <p class="p-edu"></p>
+        </div>
+        <div class="box-p">
+            <p class="p-1">荣誉奖项</p>
+            <p class="p-p"></p>
+        </div>
+        <div class="box-zh">
+            <p class="p-1">证书</p>
+            <p class="p-zh"></p>
+        </div>
+        <div class="box-skill">
+            <p class="p-1">专业技能</p>
+            <p class="p-skill"></p>
+        </div>
+        <div class="box-ho">
+            <p class="p-1">兴趣爱好</p>
+            <p class="p-ho"></p>
+        </div>
+        <div class="box-lan">
+            <p class="p-1">语言能力</p>
+            <p class="p-lan"></p>
+        </div>
+        <div class="box-exp">
+            <p class="p-1">项目经验</p>
+            <p class="p-exp"></p>
+        </div>
+        <div class="box-other">
+            <p class="p-1">其他信息</p>
+            <p class="p-other"></p>
+        </div>
+    </div>
+    <div class="right-box">
+        <div class="keep">
+            <div class="pkeep">
+                <p class="keep-p">您可以单击下方按钮导出pdf格式的简历</p>
+            </div>
+            <input class="keep-but" type="button" value="保存为pdf">
+        </div>
+        <div class="reset">
+            <div class="preset">
+                <p class="reset-p">此操作将删除您所有的数据以及本地浏览器备份，请谨慎操作</p>
+            </div>
+            <input class="reset-but" type="button" value="重置" onclick="cz()">
+        </div>
+    </div>
+</body>
+<script src="../js/index.js" ></script>
+
+<script src="../js/index2.js"></script>
+</html>
